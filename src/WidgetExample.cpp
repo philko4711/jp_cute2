@@ -12,6 +12,7 @@
 #include <iostream>
 #include <QDir>
 #include <QDebug>
+#include <QToolTip>
 
 namespace ohm_railway
 {
@@ -19,7 +20,7 @@ namespace ohm_railway
 WidgetExample::WidgetExample()
 {
   this->resize(960, 1280);
-
+  this->setToolTip("Cuteeees");
 }
 
 WidgetExample::~WidgetExample()
@@ -35,8 +36,13 @@ void WidgetExample::paintEvent(QPaintEvent* event)
 
   painter.drawImage(this->rect(), image, image.rect());
   QBrush brush(Qt::SolidPattern);
-  brush.setColor(Qt::red);
+  brush.setColor(Qt::black);
   painter.setBrush(brush);
+  QPen pen(Qt::SolidLine);
+  pen.setColor(Qt::black);
+  QFont serifFont("Times", 50, QFont::Bold);
+  painter.setFont(serifFont);
+  painter.drawText(this->rect().center() - QPoint(this->width() / 3, this->height() / 3), "Cuteeees");
 }
 
 } /* namespace ohm_railway */
