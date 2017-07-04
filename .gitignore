@@ -1,0 +1,11 @@
+.cproject
+.project
+.settings
+CMakeCache.txt
+CMakeFiles
+Makefile
+bin
+cmake_install.cmake
+*.cxx
+*.cxx_parameters
+
