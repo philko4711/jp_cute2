@@ -20,6 +20,7 @@ public:
   virtual ~TutMenu();
 private slots:
   void bastardClicked(void);
+  void sliderSlut(int hure);
 private:
 
   Ui::Form* _tutGuiUi;

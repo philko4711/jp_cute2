@@ -14,6 +14,7 @@ TutMenu::TutMenu():
 {
   _tutGuiUi->setupUi(this);
   connect(_tutGuiUi->buttonBastart, SIGNAL(clicked()), this, SLOT(bastardClicked()));
+  connect(_tutGuiUi->verticalSlider, SIGNAL(valueChanged(int)), this, SLOT(sliderSlut(int)));
 }
 
 TutMenu::~TutMenu()
@@ -24,4 +25,10 @@ TutMenu::~TutMenu()
 void TutMenu::bastardClicked(void)
 {
   qDebug() << __PRETTY_FUNCTION__ << " BastartDDDTTTTT!";
+}
+
+void TutMenu::sliderSlut(int hure)
+{
+  qDebug() << __PRETTY_FUNCTION__ << " YOU'RE " << hure << "x A SLUTTY SLUT!";
+
 }
