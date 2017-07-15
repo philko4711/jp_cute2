@@ -10,6 +10,7 @@
 
 #include "WidgetExample.h"
 #include "TutMenu.h"
+#include "SweeperMenu.h"
 
 int main(int argc, char** argv)
 {
@@ -18,6 +19,8 @@ int main(int argc, char** argv)
 //  example.show();
   TutMenu menu;
   menu.show();
+  SweeperMenu startmenu;
+  startmenu.show();
   return app.exec();
 }
 

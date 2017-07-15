@@ -15,16 +15,18 @@ ADD_DEFINITIONS(${QT_DEFINITIONS})
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR})
 
 SET(JP_HEADERS src/WidgetExample.h
-               src/TutMenu.h)
+               src/TutMenu.h
+               src/SweeperMenu.h)
 				
 QT4_WRAP_CPP(JP_HEADERS_MOC ${JP_HEADERS})
 
-SET(JP_FORMS src/forms/tut.ui)
+SET(JP_FORMS src/forms/tut.ui src/forms/sweepermenu.ui)
 QT4_WRAP_UI(JP_FORM_HEADERS ${JP_FORMS})
 
 ADD_EXECUTABLE(jp_cute2 src/jp_cute2.cpp 
                         src/WidgetExample.cpp
                         src/TutMenu.cpp 
+                        src/SweeperMenu.cpp
                         ${JP_HEADERS_MOC} 
                         ${JP_FORM_HEADERS})
 
