@@ -16,9 +16,9 @@ SET(JP_HEADERS src/WidgetExample.h)
 				
 QT4_WRAP_CPP(JP_HEADERS_MOC ${JP_HEADERS})
 
-#SET(ICP_SETUP_FORMS icp_setup_widget/src/icp_menu.ui)
-#QT4_WRAP_UI(ICP_SETUP_FORM_HEADERS ${ICP_SETUP_FORMS})
+SET(JP_FORMS src/forms/tut.ui)
+QT4_WRAP_UI(JP_FORM_HEADERS ${JP_FORMS})
 
-ADD_EXECUTABLE(jp_cute2 src/jp_cute2.cpp src/WidgetExample.cpp ${JP_HEADERS_MOC})
+ADD_EXECUTABLE(jp_cute2 src/jp_cute2.cpp src/WidgetExample.cpp ${JP_HEADERS_MOC} ${JP_FORM_HEADERS})
 
 TARGET_LINK_LIBRARIES(jp_cute2  ${QT_LIBRARIES})
