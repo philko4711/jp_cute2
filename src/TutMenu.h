@@ -18,6 +18,11 @@ class TutMenu: public QWidget
 public:
   TutMenu();
   virtual ~TutMenu();
+private slots:
+  void bastardClicked(void);
+private:
+
+  Ui::Form* _tutGuiUi;
 };
 
 #endif /* SRC_TUTMENU_H_ */

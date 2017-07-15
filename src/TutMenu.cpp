@@ -7,10 +7,13 @@
 
 #include "TutMenu.h"
 
-TutMenu::TutMenu()
-{
-  // TODO Auto-generated constructor stub
+#include <QDebug>
 
+TutMenu::TutMenu():
+  _tutGuiUi(new Ui::Form)
+{
+  _tutGuiUi->setupUi(this);
+  connect(_tutGuiUi->buttonBastart, SIGNAL(clicked()), this, SLOT(bastardClicked()));
 }
 
 TutMenu::~TutMenu()
@@ -18,3 +21,7 @@ TutMenu::~TutMenu()
   // TODO Auto-generated destructor stub
 }
 
+void TutMenu::bastardClicked(void)
+{
+  qDebug() << __PRETTY_FUNCTION__ << " BastartDDDTTTTT!";
+}
